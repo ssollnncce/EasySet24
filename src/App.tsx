@@ -1,4 +1,4 @@
-import { Button } from './shared/ui/button/Button'
+import { Button } from './shared/ui/button'
 
 function App() {
   return (
@@ -6,7 +6,7 @@ function App() {
       <h1 className="text-3xl font-bold">EasySet24</h1>
       <Button variant="primary" size="md">Primary Button</Button>
       <Button variant='secondary'>Secondary button</Button>
-      <Button variant='ghost'>Ghost button</Button>
+      <Button variant='ghost' size='xlg'>Ghost button</Button>
     </div>
   )
 }

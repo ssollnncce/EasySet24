@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "primary" | "secondary" | "ghost";
-type ButtonSize = "sm" | "md" | "lg";
+type ButtonVariant = "primary" | "secondary" | "ghost" | "dark";
+type ButtonSize = "sm" | "md" | "lg" | "xlg";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
     variant?: ButtonVariant;
@@ -33,6 +33,10 @@ const variantClasses: Record<ButtonVariant, string> = {
     border-brand-blue
     border-[1px]
     `,
+    dark: `
+    bg-brand-dark
+    text-white
+    `,
     ghost: `
     bg-brand-ghost
     text-white
@@ -42,16 +46,20 @@ const variantClasses: Record<ButtonVariant, string> = {
 const sizeClasses: Record<ButtonSize, string> = {
     sm: `
     text-[0.8rem]
-    py-[0.5rem]
-    px-[0.5rem]`,
+    w-[121px]
+    h-[32px]`,
     md: `
     text-[1rem]
-    py-[1rem]
-    px-[0.5rem]`,
+    w-[121px]
+    h-[40px]`,
     lg: `
     text-[1.2rem]
-    py-[1.5rem]
-    px-[1rem]`
+    w-[121px]
+    h-[48px]`,
+    xlg: `
+    text-[1.5rem]
+    w-[121px]
+    h-[56px]`
 }
 
 export function Button({
